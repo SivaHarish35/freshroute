@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  /* Light mode — clean white with green accents */
+  --bg-primary: #F0F4F8;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #EBF5EE;
+  --text-main: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --border-color: #CBD5E1;
+  --primary-green: #16A34A;
+  --soft-green: #DCFCE7;
+  --deep-green: #14532D;
+  --primary-gold: #B8872B;
+  --soft-gold: #FEF9C3;
+  --deep-gold: #854D0E;
+  --fresh-green: #16A34A;
+  --pale-green: #DCFCE7;
+  --warning-amber: #D97706;
+  --pale-amber: #FEF3C7;
+  --critical-red: #DC2626;
+  --pale-red: #FEE2E2;
+  --sidebar-bg: #0F172A;
+  --sidebar-text: #CBD5E1;
+  --sidebar-active: #22C55E;
+  --sidebar-active-bg: #14532D;
+}
+
+.dark {
+  /* Dark mode — deep navy #0B1220 with vibrant green #22C55E */
+  --bg-primary: #0B1220;
+  --bg-card: #111C2E;
+  --bg-card-subtle: #162236;
+  --text-main: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --border-color: #1E3050;
+  --primary-green: #22C55E;
+  --soft-green: #14532D;
+  --deep-green: #86EFAC;
+  --primary-gold: #D4A13B;
+  --soft-gold: #2E2512;
+  --deep-gold: #E5B44F;
+  --fresh-green: #22C55E;
+  --pale-green: #14532D;
+  --warning-amber: #F59E0B;
+  --pale-amber: #451A03;
+  --critical-red: #EF4444;
+  --pale-red: #450A0A;
+  --sidebar-bg: #060D19;
+  --sidebar-text: #94A3B8;
+  --sidebar-active: #22C55E;
+  --sidebar-active-bg: #14532D;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
